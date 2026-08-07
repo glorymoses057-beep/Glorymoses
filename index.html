@@ -8,7 +8,7 @@
 
 <meta property="og:title" content="Glory Moses">
 <meta property="og:description" content="Vision. Creation. Impact. Building ventures and digital solutions that empower people, create opportunities, and drive lasting impact.">
-<meta property="og:image" content="glory-photo.jpeg">
+<meta property="og:image" content="https://glorymoses.co/glory-photo.jpeg">
 <meta property="og:url" content="https://glorymoses.co">
 <meta property="og:type" content="profile">
 
@@ -29,9 +29,11 @@
 }
 </script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Alex+Brush&display=swap');
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
 
+<style>
   :root{
     --paper: #F4F0E8;
     --paper-deep: #E7E0D2;
@@ -56,8 +58,10 @@
   .eyebrow{
     font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);
     font-weight:600; margin-bottom:10px; position:relative; padding-bottom:14px;
+    display:flex; align-items:center; gap:12px;
   }
   .eyebrow::after{content:""; position:absolute; left:0; bottom:0; width:26px; height:2px; background:var(--ink);}
+  .eyebrow .num{font-size:11px; opacity:0.45; letter-spacing:0.06em;}
 
   .btn{
     display:inline-flex; align-items:center; gap:10px; padding:16px 28px; background:var(--ink); color:var(--paper);
@@ -84,19 +88,19 @@
   .hero p{font-size:16px; color:var(--muted); max-width:400px; margin-top:26px;}
   .hero .btn{margin-top:38px;}
   .hero-photo{aspect-ratio: 4/5; overflow:hidden;}
-  .hero-photo img{width:100%; height:100%; object-fit:cover; object-position: top center;}
+  .hero-photo img{width:100%; height:100%; object-fit:cover; object-position: 50% 15%;}
 
-  section{padding:100px 0;}
+  section{padding:128px 0;}
 
   /* About */
   #about{background:var(--paper);}
-  .about-grid{display:grid; grid-template-columns: 1.1fr 0.9fr; gap:70px;}
+  .about-grid{display:grid; grid-template-columns: 1.1fr 0.9fr; gap:0;}
   .about-copy h2{font-size:clamp(28px,3vw,38px); font-weight:700; line-height:1.15; margin-bottom:24px;}
   .about-copy p{font-size:15.5px; color:var(--muted); max-width:460px;}
   .about-copy p + p{margin-top:16px;}
   .signature{font-family:'Alex Brush', cursive; font-size:38px; margin-top:26px; color:var(--ink);}
 
-  .feature-list{display:flex; flex-direction:column;}
+  .feature-list{display:flex; flex-direction:column; padding-left:56px; border-left:1px solid var(--line);}
   .feature{display:flex; gap:20px; padding:22px 0; border-top:1px solid var(--line);}
   .feature:last-child{border-bottom:1px solid var(--line);}
   .feature .icon{flex-shrink:0; width:26px; height:26px; margin-top:2px;}
@@ -109,7 +113,16 @@
   .ventures-top h2{font-size:clamp(26px,3vw,36px); font-weight:700; line-height:1.18;}
   .ventures-top p{font-size:15px; color:var(--muted); max-width:340px;}
   .venture-panel{display:grid; grid-template-columns: 0.85fr 1.15fr; background:var(--white); border:1px solid var(--line);}
-  .venture-visual{background:var(--ink); color:var(--paper); display:flex; align-items:center; justify-content:center; padding:40px; text-align:center;}
+  .venture-visual{
+    background: radial-gradient(circle at 30% 20%, #2a251f 0%, var(--ink) 60%);
+    color:var(--paper); display:flex; align-items:center; justify-content:center; padding:40px; text-align:center;
+    position:relative; overflow:hidden;
+  }
+  .venture-visual::after{
+    content:""; position:absolute; inset:0;
+    background: linear-gradient(135deg, transparent 40%, rgba(176,141,87,0.14) 100%);
+  }
+  .venture-visual > div{position:relative; z-index:1;}
   .venture-visual .vname{font-size:26px; font-weight:700; line-height:1.05;}
   .venture-visual .vsub{font-size:12px; letter-spacing:0.14em; text-transform:uppercase; opacity:0.7; margin-top:12px;}
   .venture-body{padding:44px 48px;}
@@ -117,9 +130,10 @@
   .venture-body .tagline{font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-top:10px;}
   .venture-body p{font-size:14.5px; color:var(--muted); max-width:420px; margin-top:16px;}
   .venture-body .visit{display:inline-flex; align-items:center; gap:8px; margin-top:20px; font-size:13px; font-weight:600; text-decoration:underline; text-underline-offset:4px;}
-  .venture-checks{display:grid; gap:12px; align-content:start;}
+  .venture-checks{display:grid; gap:0; align-content:start;}
+  .check-item{display:flex; align-items:center; gap:10px; font-size:14px; white-space:nowrap; padding:11px 0; border-bottom:1px solid var(--line);}
+  .check-item:last-child{border-bottom:none;}
   .venture-split{display:grid; grid-template-columns:1fr auto; gap:24px; padding:44px 48px;}
-  .check-item{display:flex; align-items:center; gap:10px; font-size:14px; white-space:nowrap;}
   .check-item svg{flex-shrink:0;}
 
   /* Values */
@@ -127,6 +141,11 @@
   .values-grid{display:grid; grid-template-columns:1fr 2fr; gap:60px;}
   .values-grid > h2{font-size:clamp(26px,3vw,36px); font-weight:700; line-height:1.2;}
   .values-cols{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
+  .value-col{position:relative; padding-top:8px;}
+  .value-col .bignum{
+    position:absolute; top:-34px; right:0; font-family:'Hanken Grotesk',sans-serif; font-weight:700;
+    font-size:64px; color:transparent; -webkit-text-stroke:1px var(--line); opacity:0.9;
+  }
   .value-col h3{font-size:18px; font-weight:700; margin-top:16px; position:relative; padding-bottom:14px;}
   .value-col h3::after{content:""; position:absolute; left:0; bottom:0; width:20px; height:2px; background:var(--ink);}
   .value-col p{font-size:14px; color:var(--muted); margin-top:14px;}
@@ -165,10 +184,13 @@
     .about-grid, .ventures-top, .values-grid, .contact-grid{grid-template-columns:1fr;}
     .venture-panel{grid-template-columns:1fr;}
     .venture-split{grid-template-columns:1fr;}
-    .values-cols{grid-template-columns:1fr;}
+    .values-cols{grid-template-columns:1fr; gap:48px;}
+    .feature-list{border-left:none; padding-left:0; margin-top:36px; padding-top:36px; border-top:1px solid var(--line);}
+    .value-col .bignum{top:-8px; right:auto; left:0; font-size:44px;}
+    .value-col{padding-top:44px;}
     nav ul{gap:20px;}
     .wrap{padding:0 24px;}
-    section{padding:64px 0;}
+    section{padding:72px 0;}
   }
   @media (max-width:600px){
     header .wrap{flex-direction:column; align-items:flex-start; gap:18px;}
@@ -178,9 +200,11 @@
     .hero-eyebrow{margin-bottom:16px;}
     .hero p{font-size:15px;}
     .hero .btn{width:100%; justify-content:center;}
+    .hero-photo{aspect-ratio: 3/4;}
     .venture-body, .venture-split{padding:28px 24px;}
     .venture-visual{padding:32px 24px;}
     .check-item{white-space:normal;}
+    .signature{font-size:32px;}
     footer .wrap{flex-direction:column; align-items:flex-start; text-align:left;}
     .mini-form{max-width:100%;}
     .contact-side .btn{width:100%; justify-content:center;}
@@ -240,7 +264,7 @@
   <div class="wrap">
     <div class="about-grid">
       <div class="about-copy">
-        <div class="eyebrow">About Me</div>
+        <div class="eyebrow"><span class="num">01</span>About Me</div>
         <h2>I'm Glory Moses.<br>I build with purpose.</h2>
         <p>I'm a founder and entrepreneur passionate about leveraging technology, education, and digital strategies to help individuals and businesses grow, scale, and make an impact.</p>
         <p>Through my ventures, I create practical solutions that equip people with in demand skills and open doors to new possibilities.</p>
@@ -276,7 +300,10 @@
 <section id="ventures">
   <div class="wrap">
     <div class="ventures-top">
-      <h2>Ventures with vision.<br>Built for impact.</h2>
+      <div>
+        <div class="eyebrow"><span class="num">02</span>Ventures</div>
+        <h2>Ventures with vision.<br>Built for impact.</h2>
+      </div>
       <p>I'm the founder of ventures focused on digital education, capacity building, and online empowerment.</p>
     </div>
     <div class="venture-panel">
@@ -326,21 +353,24 @@
   <div class="wrap">
     <div class="values-grid">
       <div>
-        <div class="eyebrow">My Values</div>
+        <div class="eyebrow"><span class="num">03</span>My Values</div>
         <h2>The principles that guide everything I do.</h2>
       </div>
       <div class="values-cols">
         <div class="value-col">
+          <span class="bignum">01</span>
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M2 13c2.7-5 6.7-7.5 11-7.5S21.3 8 24 13c-2.7 5-6.7 7.5-11 7.5S4.7 18 2 13Z" stroke="currentColor" stroke-width="1.3"/><circle cx="13" cy="13" r="3.2" stroke="currentColor" stroke-width="1.3"/></svg>
           <h3>Vision</h3>
           <p>I see beyond the now. I set bold goals and create pathways to bring them to life.</p>
         </div>
         <div class="value-col">
+          <span class="bignum">02</span>
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 20h10M9.5 22.5h7M13 3a6.5 6.5 0 0 0-3.5 12v3h7v-3A6.5 6.5 0 0 0 13 3Z" stroke="currentColor" stroke-width="1.3"/></svg>
           <h3>Creation</h3>
           <p>I turn ideas into value. I build with creativity, strategy, and excellence.</p>
         </div>
         <div class="value-col">
+          <span class="bignum">03</span>
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 22s-9-5.7-9-12.4A5.1 5.1 0 0 1 13 6.4a5.1 5.1 0 0 1 9 3.2C22 16.3 13 22 13 22Z" stroke="currentColor" stroke-width="1.3"/></svg>
           <h3>Impact</h3>
           <p>I exist to make a difference. I empower people and create lasting change.</p>
@@ -354,7 +384,7 @@
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <div class="eyebrow">Let's Connect</div>
+        <div class="eyebrow"><span class="num">04</span>Let's Connect</div>
         <h2>Let's build something extraordinary together.</h2>
       </div>
       <div class="contact-side">
