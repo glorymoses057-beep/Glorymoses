@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Glory Moses Digital is an online learning and digital skills platform founded by Glory Moses, helping people gain in-demand digital skills and build opportunities in the modern economy.">
+<meta name="theme-color" content="#1a1a1a">
+<title>Glory Moses Digital | Digital Skills. Online Education. Real Impact.</title>
+
+<meta property="og:title" content="Glory Moses Digital">
+<meta property="og:description" content="Digital Skills. Online Education. Real Impact. An online learning platform founded by Glory Moses.">
+<meta property="og:image" content="https://glorymoses.co/glory-photo.jpeg">
+<meta property="og:url" content="https://glorymoses.co/glory-moses-digital.html">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://glorymoses.co/#glorymosesdigital",
+  "name": "Glory Moses Digital",
+  "url": "https://glorymoses.co/glory-moses-digital.html",
+  "description": "An online learning and digital skills platform empowering individuals to gain in-demand skills, build confidence, and create opportunities in the digital economy.",
+  "founder": {
+    "@id": "https://glorymoses.co/#person",
+    "@type": "Person",
+    "name": "Glory Moses",
+    "url": "https://glorymoses.co"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Glory Moses Digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Glory Moses Digital is an online learning and digital skills platform founded by Glory Moses, helping beginners gain practical digital skills and build opportunities in the online economy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Glory Moses Digital for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Glory Moses Digital is built for everyday people who want to learn practical digital skills and start earning online, regardless of prior experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with Glory Moses Digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can get started by joining the free live webinar or reaching out directly through the contact options on glorymoses.co."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Glory Moses Digital connected to Glory Moses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Glory Moses Digital is a venture founded by Glory Moses, focused on digital skills, online education, and practical opportunities in the modern economy."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #f7f4ef;
+  --paper: #fbf9f5;
+  --cream: #f0ebe3;
+  --ink: #1a1a1a;
+  --ink-soft: #3d3d3d;
+  --muted: #6b6b6b;
+  --line: #e4dfd6;
+  --button: #1a1a1a;
+  --button-text: #f7f4ef;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; transition: opacity .2s ease; }
+a:hover { opacity: .7; }
+
+.nav {
+  height: 80px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(247, 244, 239, 0.92);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+}
+
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+.brand-mark {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+}
+.brand-name { font-size: 15px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+.nav-talk { font-size: 13px; font-weight: 500; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+
+.breadcrumb {
+  padding: 20px 6% 0;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+.breadcrumb a { color: var(--ink-soft); border-bottom: 1px solid var(--line); }
+
+.hero {
+  min-height: 60vh;
+  padding: 4% 6% 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--paper);
+}
+
+.eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 500; line-height: 1.1; letter-spacing: -1.5px;
+  color: var(--ink); margin-bottom: 24px; max-width: 780px;
+}
+
+.hero-lead {
+  font-size: 17px; line-height: 1.7; color: var(--ink-soft);
+  max-width: 560px; margin-bottom: 36px;
+}
+
+.actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block; padding: 14px 26px;
+  background: var(--button); color: var(--button-text);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+}
+
+.quiet {
+  font-size: 13px; font-weight: 500;
+  border-bottom: 1px solid var(--muted); padding-bottom: 3px; color: var(--ink-soft);
+}
+
+.section { padding: 90px 6%; position: relative; }
+.section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 16px;
+}
+.section h2 {
+  font-size: clamp(30px, 3.6vw, 44px); font-weight: 500;
+  line-height: 1.15; letter-spacing: -0.8px; color: var(--ink); margin-bottom: 28px;
+}
+
+.what { background: var(--bg); }
+.what p { font-size: 17px; line-height: 1.75; color: var(--ink-soft); max-width: 640px; margin-bottom: 20px; }
+
+.offerings { background: var(--cream); }
+.offer-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px;
+}
+.offer-card {
+  background: var(--paper); border: 1px solid var(--line); padding: 32px 28px;
+}
+.offer-card .mark {
+  width: 40px; height: 40px; border: 1.5px solid var(--ink); border-radius: 50%;
+  display: grid; place-items: center; font-size: 13px; font-weight: 600; margin-bottom: 20px;
+}
+.offer-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+.offer-card p { font-size: 14px; line-height: 1.65; color: var(--muted); }
+
+.who { background: var(--paper); }
+.who-list { list-style: none; display: grid; gap: 14px; margin-top: 32px; max-width: 560px; }
+.who-list li {
+  font-size: 16px; color: var(--ink-soft); display: flex; align-items: flex-start; gap: 12px;
+  line-height: 1.6;
+}
+.who-list li::before {
+  content: ""; width: 6px; height: 6px; background: var(--ink); border-radius: 50%;
+  flex-shrink: 0; margin-top: 9px;
+}
+
+.cta-band {
+  background: var(--ink); color: #fff; text-align: center;
+}
+.cta-band .section-label { color: rgba(255,255,255,0.5); }
+.cta-band h2 { color: #fff; }
+.cta-band p { color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto 32px; font-size: 16px; line-height: 1.7; }
+.cta-band .btn-light {
+  display: inline-block; padding: 14px 28px; background: #fff; color: var(--ink);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+}
+.placeholder-note {
+  margin-top: 28px; font-size: 12px; color: rgba(255,255,255,0.4); max-width: 480px;
+  margin-left: auto; margin-right: auto;
+}
+
+.faq { background: var(--bg); }
+.faq-list { max-width: 720px; margin-top: 12px; }
+.faq-item { border-top: 1px solid var(--line); padding: 28px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-item h3 { font-size: 18px; font-weight: 500; margin-bottom: 10px; color: var(--ink); }
+.faq-item p { font-size: 15px; line-height: 1.7; color: var(--ink-soft); max-width: 600px; }
+
+footer {
+  background: #0f0f0f; color: rgba(255,255,255,0.5); padding: 28px 6%;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px; font-size: 11px; letter-spacing: 1px;
+}
+footer .brand-mark { width: 28px; height: 28px; border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.7); font-size: 10px; }
+.footer-left { display: flex; align-items: center; gap: 12px; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  .nav-links { gap: 16px; }
+  .offer-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { height: 68px; padding: 0 5%; }
+  .brand-name { font-size: 13px; }
+  .nav-links a { display: none; }
+  .hero { padding: 32px 5% 40px; }
+  .section { padding: 60px 5%; }
+  footer { padding: 22px 5%; flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/">
+    <span class="brand-mark">GM</span>
+    <span class="brand-name">Glory Moses</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#what">What It Is</a>
+    <a href="#who">Who It's For</a>
+    <a href="#faq">FAQ</a>
+    <a href="#start">Get Started</a>
+  </nav>
+  <a class="nav-talk" href="/#contact">Contact Glory</a>
+</header>
+
+<p class="breadcrumb"><a href="/">Glory Moses</a> &nbsp;/&nbsp; Glory Moses Digital</p>
+
+<section class="hero">
+  <p class="eyebrow">A Venture by Glory Moses</p>
+  <h1>Digital Skills.<br>Online Education.<br>Real Impact.</h1>
+  <p class="hero-lead">Glory Moses Digital is an online learning platform built to help everyday people gain practical digital skills, grow their confidence, and build real opportunities in the digital economy.</p>
+  <div class="actions">
+    <a class="btn" href="#start">Get Started</a>
+    <a class="quiet" href="#what">Learn more</a>
+  </div>
+</section>
+
+<section id="what" class="what section reveal">
+  <p class="section-label">What It Is</p>
+  <h2>Practical skills.<br>Built for real life.</h2>
+  <p>Glory Moses Digital was founded to close the gap between wanting to work online and actually knowing how. It focuses on practical, in-demand digital skills rather than theory — the kind of skills that translate directly into new opportunities, whether that's a first online income stream or a bigger career shift.</p>
+  <p>It's the applied, hands-on arm of Glory Moses's wider mission: building ventures and digital solutions that create real opportunity.</p>
+</section>
+
+<section id="offerings" class="offerings section reveal">
+  <p class="section-label">What's Included</p>
+  <h2>Everything you need to start, in one place.</h2>
+  <div class="offer-grid">
+    <div class="offer-card">
+      <div class="mark">01</div>
+      <h3>Practical Digital Skills</h3>
+      <p>Skill-building focused on what's actually usable, not just theory.</p>
+    </div>
+    <div class="offer-card">
+      <div class="mark">02</div>
+      <h3>Online Courses</h3>
+      <p>Structured, self-paced learning designed for beginners.</p>
+    </div>
+    <div class="offer-card">
+      <div class="mark">03</div>
+      <h3>Resources & Tools</h3>
+      <p>Templates, guides, and tools to put skills into practice right away.</p>
+    </div>
+    <div class="offer-card">
+      <div class="mark">04</div>
+      <h3>Community Support</h3>
+      <p>A space to learn alongside others on the same path.</p>
+    </div>
+    <div class="offer-card">
+      <div class="mark">05</div>
+      <h3>Career Growth</h3>
+      <p>Skills and guidance built to open doors, not just fill time.</p>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="who section reveal">
+  <p class="section-label">Who It's For</p>
+  <h2>Built for people starting where they are.</h2>
+  <ul class="who-list">
+    <li>Beginners who want to learn a real digital skill, with no prior experience required.</li>
+    <li>Anyone looking to build an additional income stream around their existing work or family life.</li>
+    <li>People who've wanted to start online but didn't know where to begin.</li>
+  </ul>
+</section>
+
+<section id="start" class="cta-band section reveal">
+  <p class="section-label">Get Started</p>
+  <h2>Ready to begin?</h2>
+  <p>Join the next free live session to see exactly how Glory Moses Digital works, or reach out directly with questions.</p>
+  <a class="btn-light" href="https://wa.me/33604006031" target="_blank" rel="noopener">Message on WhatsApp</a>
+  <p class="placeholder-note">Add the current webinar schedule and signup link here once confirmed.</p>
+</section>
+
+<section id="faq" class="faq section reveal">
+  <p class="section-label">Common Questions</p>
+  <h2>Frequently asked.</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>What is Glory Moses Digital?</h3>
+      <p>Glory Moses Digital is an online learning and digital skills platform founded by Glory Moses, helping beginners gain practical digital skills and build opportunities in the online economy.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Who is Glory Moses Digital for?</h3>
+      <p>Glory Moses Digital is built for everyday people who want to learn practical digital skills and start earning online, regardless of prior experience.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I get started with Glory Moses Digital?</h3>
+      <p>You can get started by joining the free live webinar or reaching out directly through the contact options on glorymoses.co.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is Glory Moses Digital connected to Glory Moses?</h3>
+      <p>Yes. Glory Moses Digital is a venture founded by Glory Moses, focused on digital skills, online education, and practical opportunities in the modern economy.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <span class="brand-mark">GM</span>
+    <span>Glory Moses Digital</span>
+  </div>
+  <span>A venture by Glory Moses</span>
+  <span>© 2026 Glory Moses. All rights reserved.</span>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
